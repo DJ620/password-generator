@@ -9,16 +9,19 @@ var characters = "!@#$%^&*()+=~[]{}/?.,<>;:".split("");
 
 // The function that will generate the password
 function generatePassword() {
+
   // Declaring my result as an empty array
   var result=[];
+
   // Declaring an empty array that will hold character sets that the user chooses later on
   var criteria = [];
 
   // Variable that stores the length of the password based on user input
   var pwLength = prompt("How many characters would you like in your password?");
 
-  // A loop that will run if the length selected is not between 8 and 128
-  while (pwLength < 8 || pwLength > 128 || typeof pwLength !== "number") {
+  // A loop that will run if the length selected is not between 8 and 128, or if anything besides a number was typed in
+  while (pwLength < 8 || pwLength > 128 || isNaN(parseInt(pwLength))) {
+
     // If the length selected is not within the parameters, a prompt lets the user know to keep the length between 8 and 128 and asks the user to once again enter the length of their desired password
     alert("Password must be a number between 8 and 128 characters");
     pwLength = prompt("How many characters would you like in your password?");
@@ -30,6 +33,7 @@ function generatePassword() {
     var uppercase = confirm("Would you like to include uppercase letters?");
     var numbers = confirm("Would you like to include numbers?");
     var specialCharacters = confirm("Would you like to include special characters?");
+
     // If the user says no to all criteria, they are alerted that they must choose at least one, and the loop is repeated
     if (!lowercase && !uppercase && !numbers && !specialCharacters) {
       alert("Please select at least one parameter");
@@ -57,6 +61,7 @@ function generatePassword() {
 
   // A while statement that runs until the password is the length specified by the user. This loop will randomize the order of types of characters
   while (result.length < pwLength) {
+    
     // Sets random to a randomly selected character set within the criteria array
     var random = criteria[Math.floor(Math.random() * criteria.length)];
     // Adds a random index from the pre-determined random array to the result array
