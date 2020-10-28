@@ -14,6 +14,16 @@ function generatePassword() {
   // Declaring an empty array that will hold character sets that the user chooses later on
   var criteria = [];
 
+  // Variable that stores the length of the password based on user input
+  var pwLength = prompt("How many characters would you like in your password?");
+
+  // A loop that will run if the length selected is not between 8 and 128
+  while (pwLength < 8 || pwLength > 128) {
+    // If the length selected is not within the parameters, a prompt lets the user know to keep the length between 8 and 128 and asks the user to once again enter the length of their desired password
+    alert("Password must be between 8 and 128 characters");
+    pwLength = prompt("How many characters would you like in your password?");
+  }
+
   // A while statement to make sure that the user selects at least one of the presented criteria
   while (!lowercase && !uppercase && !numbers && !specialCharacters) {
     var lowercase = confirm("Would you like to include lowercase letters?");
@@ -38,16 +48,6 @@ function generatePassword() {
   }
   if (specialCharacters) {
     criteria.push(characters);
-  }
-
-  // Variable that stores the length of the password based on user input
-  var pwLength = prompt("How many characters would you like in your password?");
-
-  // A loop that will run if the length selected is not between 8 and 128
-  while (pwLength < 8 || pwLength > 128) {
-    // If the length selected is not within the parameters, a prompt lets the user know to keep the length between 8 and 128 and asks the user to once again enter the length of their desired password
-    alert("Password must be between 8 and 128 characters.");
-    pwLength = prompt("How many characters would you like in your password?");
   }
 
   // A loop to guarantee that at least one character from each selected criteria is included in the generated password
