@@ -27,7 +27,7 @@ To use the password generator, simply navigate to the page and click the 'Genera
 
 ![how many characters screenshot](length.png)
 
-If you enter a number smaller than 8 or larger than 128, you will get an alert that informs you that the number must be between 8 and 128.
+If you enter a number smaller than 8 or larger than 128, or any character that isn't a number, you will get an alert that informs you that the length must be a number between 8 and 128.
 
 ![length alert screenshot](length-alert.png)
 
