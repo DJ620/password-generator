@@ -18,9 +18,9 @@ function generatePassword() {
 
   // Variable that stores the length of the password based on user input
   var pwLength = prompt("How many characters would you like in your password?");
-
+  
   // A loop that will run if the length selected is not between 8 and 128, or if anything besides a number was typed in
-  while (pwLength < 8 || pwLength > 128 || isNaN(parseInt(pwLength))) {
+  while (pwLength < 8 || pwLength > 128 || pwLength.split("").some(num=>isNaN(parseInt(num)))) {
 
     // If the length selected is not within the parameters, a prompt lets the user know to keep the length between 8 and 128 and asks the user to once again enter the length of their desired password
     alert("Password must be a number between 8 and 128 characters");
