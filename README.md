@@ -39,7 +39,7 @@ If you do not choose any of these criteria, you will see an alert that says you 
 
 ![criteria alert screenshot](criteria-alert.png)
 
-After you have answered that want to include at least one of the given criteria, a password of your specified length will display inside the text-box. The algorithm ensures that at least one of each type of character is included.
+After you have answered that you want to include at least one of the given criteria, a password of your specified length will display inside the text-box. The algorithm ensures that at least one of each type of character is included.
 
 ![result screenshot](result.png)
 
