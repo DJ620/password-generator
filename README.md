@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a password generator. When you click the 'Generate Password' button, you will be prompted to answer several questions about how you want your password to turn out.
+This is a password generator. When you click the 'Generate Password' button, you will be prompted to answer several questions about how you want your password to turn out, and then one will be displayed for you to use.
 
 This application helps anyone who is looking for a unique password for any sensitive data.
 
